@@ -3,170 +3,96 @@
 <head>
     <meta charset="utf-8">
     <title>Course Selection</title>
-    <style>
-        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Lobster&display=swap');
-        #container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
 
-        #left {
-            width: 50%;
-            padding-left: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #right {
-            flex: 1;
-            margin-left: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        table {
-            border-collapse: collapse;
-        }
-
-        td {
-            width: 100px;
-            height: 60px;
-            border: 1px solid black;
-            text-align: center;
-        }
-
-        h1{
-            text-align: center;
-            font-size: 50px;
-        }
-
-        h2{
-            text-align: center;
-            font-size: 30px;
-        }
-
-        input[type=checkbox] {
-            display: inline-block;
-            margin-right: 5px;
-        }
-
-        label {
-            display: block;
-        }    
-
-        body{
-            font-family: 'cwTeXYen','Comfortaa', sans-serif;
-            font-size: 20px;
-        }
+    <style type="text/css">
+        @import "style.css";
     </style>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-        function start(){
-            selectionClass();
-        }
-        function selectionClass(){
-            let courseList = document.getElementById('selectionClass');
-            $.getJSON("https://raw.githubusercontent.com/StarStar415/Course-Selection-Arrangement/main/lesson.json", function(result){
-                $.each(result, function(i, field){
-                    const checkbox = document.createElement('input');
-                    checkbox.type = 'checkbox';
-                    checkbox.name = 'course';
-                    checkbox.value = result[i].lessonNumber;
+    <script src="script.js"></script>
+    //<script>
+        // function start(){
+        //     selectionClass();
+        // }
+        // function selectionClass(){
+        //     let courseList = document.getElementById('selectionClass');
+        //     $.getJSON("https://raw.githubusercontent.com/StarStar415/Course-Selection-Arrangement/main/lesson.json", function(result){
+        //         $.each(result, function(i, field){
+        //             const checkbox = document.createElement('input');
+        //             checkbox.type = 'checkbox';
+        //             checkbox.name = 'course';
+        //             checkbox.value = result[i].lessonNumber;
 
-                    const label = document.createElement('label');
-                    label.textContent = `${result[i].lessonNumber} ${result[i].className} ${result[i].teacher} (${result[i].classTime}) `;
-                    label.insertBefore(checkbox, label.firstChild);
-                    courseList.appendChild(label);
-                    checkbox.addEventListener("change", function() {
-                        // 如果 checkbox 被勾選
-                        if (this.checked) {
-                            school_timetable();
-
-                            // 在表格中添加資料
-                            // result.forEach(course => {
-                            //         if (course.lessonNumber == this.value) {
-                            //             console.log(course.lessonNumber)
-                            //             console.log(this.value)
-                            //             console.log(course)
-                            //             let time = course.classTime;
-                            //             console.log(time)
-                            //             for(let i = 0 ; i < time.length ; i++){
-                            //                 console.log(time[i])
-                            //                 const nowChooseTime = document.getElementById(time[i]);
-                            //                 console.log(nowChooseTime)
-                            //                 let classString = course.lessonNumber +"<br>"+course.className+"<br>"+course.teacher;
-                            //                 nowChooseTime.innerHTML = classString;
-                            //             }
-                                        
-                            //         }
-                            //     });
-                        }
-                        else{
-                            school_timetable();
-                            console.log("取消")
-                        }
-                    });
-                });
-            });
-            function school_timetable(){
-                console.log("進入")
-                // 獲取所有的 checkbox 元素
-                const allCheckBox = document.querySelectorAll("input[type='checkbox']");
-                // 遍歷所有的 checkbox 元素
-                allCheckBox.forEach(function(nowCheckBox) {
-                    restartTable()
+        //             const label = document.createElement('label');
+        //             label.textContent = `${result[i].lessonNumber} ${result[i].className} ${result[i].teacher} (${result[i].classTime}) `;
+        //             label.insertBefore(checkbox, label.firstChild);
+        //             courseList.appendChild(label);
+        //             checkbox.addEventListener("change", function() {
+        //                 // 如果 checkbox 被勾選
+        //                 if (this.checked) {
+        //                     school_timetable();
+        //                 }
+        //                 else{
+        //                     school_timetable();
+        //                     console.log("取消")
+        //                 }
+        //             });
+        //         });
+        //     });
+        //     function school_timetable(){
+        //         console.log("進入")
+        //         // 獲取所有的 checkbox 元素
+        //         const allCheckBox = document.querySelectorAll("input[type='checkbox']");
+        //         // 遍歷所有的 checkbox 元素
+        //         allCheckBox.forEach(function(nowCheckBox) {
+        //             restartTable()
                     
                     
-                    // 檢查 checkbox 的狀態
-                    if (nowCheckBox.checked) {
-                        console.log("owo")
-                        $.getJSON("https://raw.githubusercontent.com/StarStar415/Course-Selection-Arrangement/main/lesson.json", function(result){
-                            console.log(result)
-                            $.each(result, function(i, field){
-                                    console.log(result[i].lessonNumber);
-                                    console.log(nowCheckBox.value);
-                                        if (result[i].lessonNumber == nowCheckBox.value) {
-                                            console.log("相同")
-                                            console.log(result[i].lessonNumber)
-                                            console.log(result[i].className)
-                                            console.log(result[i].teacher)
-                                            console.log(result[i])
-                                            let time = result[i].classTime;
-                                            console.log(time)
-                                            for(let k = 0 ; k < time.length ; k++){
-                                                console.log(time[k])
-                                                let nowChooseTime = document.getElementById(time[k]);
-                                                console.log(nowChooseTime)
-                                                let classString = result[i].lessonNumber +"<br>"+result[i].className+"<br>"+result[i].teacher+"<br>";
-                                                nowChooseTime.innerHTML += classString;
-                                            }
-                                            return false;
-                                        }
+        //             // 檢查 checkbox 的狀態
+        //             if (nowCheckBox.checked) {
+        //                 console.log("owo")
+        //                 $.getJSON("https://raw.githubusercontent.com/StarStar415/Course-Selection-Arrangement/main/lesson.json", function(result){
+        //                     console.log(result)
+        //                     $.each(result, function(i, field){
+        //                             console.log(result[i].lessonNumber);
+        //                             console.log(nowCheckBox.value);
+        //                                 if (result[i].lessonNumber == nowCheckBox.value) {
+        //                                     console.log("相同")
+        //                                     console.log(result[i].lessonNumber)
+        //                                     console.log(result[i].className)
+        //                                     console.log(result[i].teacher)
+        //                                     console.log(result[i])
+        //                                     let time = result[i].classTime;
+        //                                     console.log(time)
+        //                                     for(let k = 0 ; k < time.length ; k++){
+        //                                         console.log(time[k])
+        //                                         let nowChooseTime = document.getElementById(time[k]);
+        //                                         console.log(nowChooseTime)
+        //                                         let classString = result[i].lessonNumber +"<br>"+result[i].className+"<br>"+result[i].teacher+"<br>";
+        //                                         nowChooseTime.innerHTML += classString;
+        //                                     }
+        //                                     return false;
+        //                                 }
                                         
-                                    });
-                            });
-                    }
-                });
-            }
-            function restartTable(){
-                for(let i = 1 ; i < 6 ; i++){
-                        for(let j = 1 ; j < 9 ; j++){
-                            let tmp = i+"0"+j
-                            // console.log(tmp)
-                            let nowChooseTime = document.getElementById(tmp);
-                            console.log(nowChooseTime)
-                            nowChooseTime.innerHTML="";
-                        }
-                    }
-            }
-        }
-        window.addEventListener("load",start,false);
-    </script>
+        //                             });
+        //                     });
+        //             }
+        //         });
+        //     }
+        //     function restartTable(){
+        //         for(let i = 1 ; i < 6 ; i++){
+        //                 for(let j = 1 ; j < 9 ; j++){
+        //                     let tmp = i+"0"+j
+        //                     // console.log(tmp)
+        //                     let nowChooseTime = document.getElementById(tmp);
+        //                     console.log(nowChooseTime)
+        //                     nowChooseTime.innerHTML="";
+        //                 }
+        //             }
+        //     }
+        // }
+        // window.addEventListener("load",start,false);
+    //</script>
 
 </head>
 <body>
@@ -309,6 +235,5 @@
             
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

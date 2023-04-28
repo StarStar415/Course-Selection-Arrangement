@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Lobster&display=swap');
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#left {
+    width: 50%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#right {
+    flex: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 100px;
+    height: 60px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+input[type=checkbox] {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+label {
+    display: block;
+}    
+
+body{
+    font-family: 'cwTeXYen','Comfortaa', sans-serif;
+    font-size: 20px;
+}
