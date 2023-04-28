@@ -8,35 +8,35 @@
     },
     {
         "lessonNumber":"B5703N54",
-        "classTime":[201,202,203],
-        "teacher":"starTest",
-        "className":"starstar",
+        "classTime":[401,402,403],
+        "teacher":"KIKITest",
+        "className":"KIKI",
         "category":"選修"
     },
     {
-        "lessonNumber":"B57022TS",
+        "lessonNumber":"M57012TW",
         "classTime":[201,202,203],
-        "teacher":"starTest",
-        "className":"starstar",
+        "teacher":"RoyTest",
+        "className":"Roy",
         "category":"選修"
     },
     {
-        "lessonNumber":"B570339Q",
-        "classTime":[201,202,203],
-        "teacher":"starTest",
-        "className":"starstar",
+        "lessonNumber":"M5701M6E",
+        "classTime":[203,204],
+        "teacher":"YA",
+        "className":"YA",
         "category":"選修"
     },
     {
-        "lessonNumber":"B570339Q",
+        "lessonNumber":"M57012TT",
         "classTime":[201,202,203],
-        "teacher":"starTest",
-        "className":"starstar",
+        "teacher":"ouo",
+        "className":"ouo",
         "category":"選修"
     },
     {
-        "lessonNumber":"B570339Q",
-        "classTime":[201,202,203],
+        "lessonNumber":"M5701J7K",
+        "classTime":[101,102,103],
         "teacher":"starTest",
         "className":"starstar",
         "category":"選修"

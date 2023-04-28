@@ -72,22 +72,82 @@
         function selectionClass(){
             let courseList = document.getElementById('selectionClass');
             $.getJSON("https://raw.githubusercontent.com/StarStar415/Course-Selection-Arrangement/main/lesson.json", function(result){
-                        $.each(result, function(i, field){
-                                const checkbox = document.createElement('input');
-                                checkbox.type = 'checkbox';
-                                checkbox.name = 'course';
-                                checkbox.value = result[i].lessonNumber;
+                $.each(result, function(i, field){
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.name = 'course';
+                    checkbox.value = result[i].lessonNumber;
 
-                                const label = document.createElement('label');
-                                label.textContent = `${result[i].lessonNumber} ${result[i].className} ${result[i].teacher} (${result[i].classTime}) `;
-                                label.insertBefore(checkbox, label.firstChild);
-                                // label.appendChild(checkbox);
-                                // checkbox.appendChild(label);
+                    const label = document.createElement('label');
+                    label.textContent = `${result[i].lessonNumber} ${result[i].className} ${result[i].teacher} (${result[i].classTime}) `;
+                    label.insertBefore(checkbox, label.firstChild);
+                    courseList.appendChild(label);
+                    checkbox.addEventListener("change", function() {
+                        // 如果 checkbox 被勾選
+                        if (this.checked) {
+                            school_timetable();
 
-                                courseList.appendChild(label);
-                                
-                        });
+                            // 在表格中添加資料
+                            // result.forEach(course => {
+                            //         if (course.lessonNumber == this.value) {
+                            //             console.log(course.lessonNumber)
+                            //             console.log(this.value)
+                            //             console.log(course)
+                            //             let time = course.classTime;
+                            //             console.log(time)
+                            //             for(let i = 0 ; i < time.length ; i++){
+                            //                 console.log(time[i])
+                            //                 const nowChooseTime = document.getElementById(time[i]);
+                            //                 console.log(nowChooseTime)
+                            //                 let classString = course.lessonNumber +"<br>"+course.className+"<br>"+course.teacher;
+                            //                 nowChooseTime.innerHTML = classString;
+                            //             }
+                                        
+                            //         }
+                            //     });
+                        }
+                        else{
+                            school_timetable();
+                        }
                     });
+                });
+            });
+            function school_timetable(){
+                //console.log("ouo")
+                // 獲取所有的 checkbox 元素
+                const allCheckBox = document.querySelectorAll("input[type='checkbox']");
+                //console.log(allCheckBox)
+                // 遍歷所有的 checkbox 元素
+                allCheckBox.forEach(function(nowCheckBox) {
+                    //console.log(nowCheckBox)
+                    // 檢查 checkbox 的狀態
+                    if (nowCheckBox.checked) {
+                        console.log("owo")
+                        $.getJSON("https://raw.githubusercontent.com/StarStar415/Course-Selection-Arrangement/main/lesson.json", function(result){
+                            console.log(result)
+                            $.each(result, function(i, field){
+                                    console.log(result[i].lessonNumber);
+                                    console.log(nowCheckBox.value);
+                                        if (result[i].lessonNumber == nowCheckBox.value) {
+                                            console.log("相同")
+                                            console.log(result[i].lessonNumber)
+                                            console.log(nowCheckBox.value)
+                                            console.log(result[i])
+                                            let time = result[i].classTime;
+                                            console.log(time)
+                                            for(let i = 0 ; i < time.length ; i++){
+                                                console.log(time[i])
+                                                const nowChooseTime = document.getElementById(time[i]);
+                                                console.log(nowChooseTime)
+                                                let classString = result[i].lessonNumber +"<br>"+result[i].className+"<br>"+result[i].teacher+"<br>";
+                                                nowChooseTime.innerHTML += classString;
+                                            }
+                                        }
+                                    });
+                            });
+                    }
+                });
+            }
         }
         window.addEventListener("load",start,false);
     </script>
@@ -99,11 +159,6 @@
         <div id="left">
             <h2>選課</h2>
             <div id="selectionClass">
-                <!-- <label><input type="checkbox" value="1"> 課程 1</label><br>
-                <label><input type="checkbox" value="2"> 課程 2</label><br>
-                <label><input type="checkbox" value="3"> 課程 3</label><br>
-                <label><input type="checkbox" value="4"> 課程 4</label><br>
-                <label><input type="checkbox" value="5"> 課程 5</label><br> -->
             </div>
             
         </div>
@@ -171,27 +226,27 @@
                     </tr>
                     <tr>
                         <td>14:10</td>
-                        <td id="106"></td>
-                        <td id="206"></td>
-                        <td id="306"></td>
-                        <td id="406"></td>
-                        <td id="506"></td>
+                        <td id="107"></td>
+                        <td id="207"></td>
+                        <td id="307"></td>
+                        <td id="407"></td>
+                        <td id="507"></td>
                     </tr>
                     <tr>
                         <td>15:10</td>
-                        <td id="106"></td>
-                        <td id="206"></td>
-                        <td id="306"></td>
-                        <td id="406"></td>
-                        <td id="506"></td>
+                        <td id="108"></td>
+                        <td id="208"></td>
+                        <td id="308"></td>
+                        <td id="408"></td>
+                        <td id="508"></td>
                     </tr>
                     <tr>
                         <td>16:05</td>
-                        <td id="106"></td>
-                        <td id="206"></td>
-                        <td id="306"></td>
-                        <td id="406"></td>
-                        <td id="506"></td>
+                        <td id="109"></td>
+                        <td id="209"></td>
+                        <td id="309"></td>
+                        <td id="409"></td>
+                        <td id="509"></td>
                     </tr>
                     <tr>
                         <td>17:30</td>
