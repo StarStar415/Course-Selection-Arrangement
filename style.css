@@ -52,7 +52,21 @@ input[type=checkbox] {
 label {
     display: block;
 }    
+#choose{
+    font-size: 30px;
+}
+select{
+    font-size: 70%;
+    bottom: 120px;
+    border-radius:5px;
+    width: 150px;
+    border: solid rgb(240, 138, 138);
 
+}
+select option{
+    bottom: 120px;
+    width: 150px;
+}
 body{
     font-family: 'cwTeXYen','Comfortaa', sans-serif;
     font-size: 20px;
