@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Course Selection</title>
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Lobster&display=swap');
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #left {
+            width: 50%;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #right {
+            flex: 1;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 100px;
+            height: 60px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+
+        h2{
+            text-align: center;
+            font-size: 30px;
+        }
+
+        input[type=checkbox] {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        label {
+            display: block;
+        }    
+
+        body{
+            font-family: 'cwTeXYen','Comfortaa', sans-serif;
+            font-size: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function start(){
+            selectionClass();
+        }
+        function selectionClass(){
+            let courseList = document.getElementById('selectionClass');
+            $.getJSON("https://raw.githubusercontent.com/StarStar415/Course-Selection-Arrangement/main/lesson.json", function(result){
+                        $.each(result, function(i, field){
+                                const checkbox = document.createElement('input');
+                                checkbox.type = 'checkbox';
+                                checkbox.name = 'course';
+                                checkbox.value = result[i].lessonNumber;
+
+                                const label = document.createElement('label');
+                                label.textContent = `${result[i].lessonNumber} ${result[i].className} ${result[i].teacher} (${result[i].classTime}) `;
+                                label.insertBefore(checkbox, label.firstChild);
+                                // label.appendChild(checkbox);
+                                // checkbox.appendChild(label);
+
+                                courseList.appendChild(label);
+                                
+                        });
+                    });
+        }
+        window.addEventListener("load",start,false);
+    </script>
+
+</head>
+<body>
+    <h1>選課選課</h1>
+    <div id="container">
+        <div id="left">
+            <h2>選課</h2>
+            <div id="selectionClass">
+                <!-- <label><input type="checkbox" value="1"> 課程 1</label><br>
+                <label><input type="checkbox" value="2"> 課程 2</label><br>
+                <label><input type="checkbox" value="3"> 課程 3</label><br>
+                <label><input type="checkbox" value="4"> 課程 4</label><br>
+                <label><input type="checkbox" value="5"> 課程 5</label><br> -->
+            </div>
+            
+        </div>
+        <div id="right">
+            <h2>目前課表</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>時間</th>
+                        <th>星期一</th>
+                        <th>星期二</th>
+                        <th>星期三</th>
+                        <th>星期四</th>
+                        <th>星期五</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:20</td>
+                        <td id="101"></td>
+                        <td id="201"></td>
+                        <td id="301"></td>
+                        <td id="401"></td>
+                        <td id="501"></td>
+                    </tr>
+                    <tr>
+                        <td>09:20</td>
+                        <td id="102"></td>
+                        <td id="202"></td>
+                        <td id="302"></td>
+                        <td id="402"></td>
+                        <td id="502"></td>
+                    </tr>
+                    <tr>
+                        <td>10:20</td>
+                        <td id="103"></td>
+                        <td id="203"></td>
+                        <td id="303"></td>
+                        <td id="403"></td>
+                        <td id="503"></td>
+                    </tr>
+                    <tr>
+                        <td>11:15</td>
+                        <td id="104"></td>
+                        <td id="204"></td>
+                        <td id="304"></td>
+                        <td id="404"></td>
+                        <td id="504"></td>
+                    </tr>
+                    <tr>
+                        <td>12:10</td>
+                        <td id="105"></td>
+                        <td id="205"></td>
+                        <td id="305"></td>
+                        <td id="405"></td>
+                        <td id="505"></td>
+                    </tr>
+                    <tr>
+                        <td>13:10</td>
+                        <td id="106"></td>
+                        <td id="206"></td>
+                        <td id="306"></td>
+                        <td id="406"></td>
+                        <td id="506"></td>
+                    </tr>
+                    <tr>
+                        <td>14:10</td>
+                        <td id="106"></td>
+                        <td id="206"></td>
+                        <td id="306"></td>
+                        <td id="406"></td>
+                        <td id="506"></td>
+                    </tr>
+                    <tr>
+                        <td>15:10</td>
+                        <td id="106"></td>
+                        <td id="206"></td>
+                        <td id="306"></td>
+                        <td id="406"></td>
+                        <td id="506"></td>
+                    </tr>
+                    <tr>
+                        <td>16:05</td>
+                        <td id="106"></td>
+                        <td id="206"></td>
+                        <td id="306"></td>
+                        <td id="406"></td>
+                        <td id="506"></td>
+                    </tr>
+                    <tr>
+                        <td>17:30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18:30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>19:25</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>20:20</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>21:15</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
