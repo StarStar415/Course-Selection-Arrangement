@@ -74,10 +74,10 @@ function selectionClass(){
                        tmp = i+"0"+j
                     }
                     else{
-                        tmp = i+j;
+                        tmp = i+""+j;
                     }
                     
-                    // console.log(tmp)
+                    console.log(tmp)
                     let nowChooseTime = document.getElementById(tmp);
                     console.log(nowChooseTime)
                     nowChooseTime.innerHTML="";
