@@ -7,8 +7,12 @@
     <style type="text/css">
         @import "style.css";
     </style>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.debug.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+    </script>
     <script src="script.js"></script>
 
 </head>
@@ -31,11 +35,13 @@
         <br>
             <div id="selectionClass">
             </div>
+            <br>
+            <button id="exportButton">Export to PDF</button>
         </div>
 
         <div id="right">
             <h2>目前課表</h2>
-            <table>
+            <table id = "classTable">
                 <thead>
                     <tr>
                         <th>時間</th>

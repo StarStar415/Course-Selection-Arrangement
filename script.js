@@ -1,9 +1,24 @@
 function start(){
     selectionClass();
-    // let choose = document.getElementById("choose");
-    // choose.addEventListener("change", () => {
-    //     selectionClass();
-    // });
+    document.getElementById("exportButton").addEventListener("click", () => {
+        // 取得表格元素
+        let table = document.getElementById("classTable");
+        console.log(table);
+        // 建立 PDF 物件
+        window.jsPDF = window.jspdf.jsPDF;
+        const doc = new jsPDF();
+
+        // 將表格轉換成 PDF，指定 x、y 座標和選項
+        doc.html(table, {
+            callback: function () {
+                doc.save("file.pdf");
+                console.log("ouo")
+            }
+          });
+    
+        // 下載 PDF 檔案
+        //doc.save("table.pdf");
+    });
 }
 
 
