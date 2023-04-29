@@ -75,5 +75,19 @@
         "teacher":"翁世光",
         "className":"數值分析",
         "category":"選修"
+    },
+    {
+        "lessonNumber":"B5711M97",
+        "classTime":[108,403,404],
+        "teacher":"許玉平",
+        "className":"微積分",
+        "category":"必修"
+    },
+    {
+        "lessonNumber":"B5711M97",
+        "classTime":[108,203,204],
+        "teacher":"李孟書",
+        "className":"微積分",
+        "category":"必修"
     }
 ]
