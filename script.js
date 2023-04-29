@@ -68,8 +68,15 @@ function selectionClass(){
     }
     function restartTable(){
         for(let i = 1 ; i < 6 ; i++){
-                for(let j = 1 ; j < 9 ; j++){
-                    let tmp = i+"0"+j
+                for(let j = 1 ; j < 15 ; j++){
+                    let tmp;
+                    if (j<10){
+                       tmp = i+"0"+j
+                    }
+                    else{
+                        tmp = i+j;
+                    }
+                    
                     // console.log(tmp)
                     let nowChooseTime = document.getElementById(tmp);
                     console.log(nowChooseTime)
