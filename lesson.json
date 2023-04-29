@@ -1,44 +1,79 @@
 [
     {
-        "lessonNumber":"B570339Q",
-        "classTime":[201,202,203],
-        "teacher":"starTest",
-        "className":"starstar",
+        "lessonNumber":"B57030OI",
+        "classTime":[402,403,404],
+        "teacher":"林清池",
+        "className":"圖論演算法",
         "category":"選修"
+    },
+    {
+        "lessonNumber":"B57031EC",
+        "classTime":[202,203,204],
+        "teacher":"林韓禹",
+        "className":"資訊安全實務與管理",
+        "category":"選修"
+    },
+    {
+        "lessonNumber":"",
+        "classTime":[],
+        "teacher":"",
+        "className":"",
+        "category":"選修"
+    },
+    {
+        "lessonNumber":"B570339Q",
+        "classTime":[102,103,104],
+        "teacher":"嚴茂旭",
+        "className":"計算機系統設計",
+        "category":"選修(核心)"
+    },
+    {
+        "lessonNumber":"B57033MD",
+        "classTime":[303,304,305],
+        "teacher":"潘世穎",
+        "className":"iOS應用程式開發入門",
+        "category":"選修"
+    },
+    {
+        "lessonNumber":"B5703660",
+        "classTime":[506,507,508],
+        "teacher":"林致宇",
+        "className":"作業系統",
+        "category":"必修"
+    },
+    {
+        "lessonNumber":"B5703M36",
+        "classTime":[408,409,410],
+        "teacher":"阮議聰",
+        "className":"程式語言",
+        "category":"選修(核心)"
     },
     {
         "lessonNumber":"B5703N54",
-        "classTime":[401,402,403],
-        "teacher":"KIKITest",
-        "className":"KIKI",
+        "classTime":[106,107,108],
+        "teacher":"張雅惠",
+        "className":"資料庫系統",
+        "category":"選修(核心)"
+    },
+    {
+        "lessonNumber":"B5703N54",
+        "classTime":[	402,403,404],
+        "teacher":"鄭建富",
+        "className":"資料庫系統",
+        "category":"選修(核心)"
+    },
+    {
+        "lessonNumber":"B5703P6G",
+        "classTime":[302,303,304],
+        "teacher":"翁世光",
+        "className":"電腦圖學",
         "category":"選修"
     },
     {
-        "lessonNumber":"M57012TW",
-        "classTime":[201,202,203],
-        "teacher":"RoyTest",
-        "className":"Roy",
-        "category":"選修"
-    },
-    {
-        "lessonNumber":"M5701M6E",
-        "classTime":[203,204],
-        "teacher":"YA",
-        "className":"YA",
-        "category":"選修"
-    },
-    {
-        "lessonNumber":"M57012TT",
-        "classTime":[201,202,203],
-        "teacher":"ouo",
-        "className":"ouo",
-        "category":"選修"
-    },
-    {
-        "lessonNumber":"M5701J7K",
-        "classTime":[101,102,103],
-        "teacher":"starTest",
-        "className":"starstar",
+        "lessonNumber":"B5703S01",
+        "classTime":[102,103,104],
+        "teacher":"翁世光",
+        "className":"數值分析",
         "category":"選修"
     }
 ]
