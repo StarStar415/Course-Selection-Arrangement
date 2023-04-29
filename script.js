@@ -3,21 +3,51 @@ function start(){
     document.getElementById("exportButton").addEventListener("click", () => {
         // 取得表格元素
         let table = document.getElementById("classTable");
-        console.log(table);
-        // 建立 PDF 物件
-        window.jsPDF = window.jspdf.jsPDF;
-        const doc = new jsPDF();
 
-        // 將表格轉換成 PDF，指定 x、y 座標和選項
-        doc.html(table, {
-            callback: function () {
-                doc.save("file.pdf");
-                console.log("ouo")
+        console.log(table.innerHTML);
+        
+        const width = table.offsetWidth;
+        const height = table.offsetHeight;
+
+
+        // 將表格開在另外一個視窗
+        let printWindow = window.open('', '', `width=${width}, height=${height}`);
+
+        printWindow.document.write('<html><head><title>Print Table</title>');
+        printWindow.document.write('</head><body></body></html>');
+        printWindow.document.close();
+        
+        printWindow.document.body.innerHTML = `
+            <style>
+            html, body {
+                margin: 0;
+                padding: 10px;
             }
-          });
-    
-        // 下載 PDF 檔案
-        //doc.save("table.pdf");
+
+            table, th, td {
+                border: 1px solid;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            table {
+                width: 100%;
+                height: auto;
+                border-collapse: collapse;
+            }
+            </style>
+            <table>
+                ${table.innerHTML}
+            </table>
+        `;
+        
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+        
     });
 }
 
