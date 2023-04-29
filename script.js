@@ -41,15 +41,15 @@ function selectionClass(){
         // console.log(NowSelectedOption);
         // let nowSelect = checkSelect(NowSelectedOption);
         // console.log(nowSelect);
-        // result.sort((a, b) => {
-        //     if (a[sortBy] < b[sortBy]) {
-        //       return -1;
-        //     }
-        //     if (a[sortBy] > b[sortBy]) {
-        //       return 1;
-        //     }
-        //     return 0;
-        //   });
+        result.sort((a, b) => {
+            if (a["classTime"] < b["classTime"]) {
+              return -1;
+            }
+            if (a["classTime"] > b["classTime"]) {
+              return 1;
+            }
+            return 0;
+          });
         $.each(result, function(i, field){
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
@@ -84,6 +84,15 @@ function selectionClass(){
                 // console.log("owo")
                 $.getJSON("https://raw.githubusercontent.com/StarStar415/Course-Selection-Arrangement/main/lesson.json", function(result){
                     // console.log(result)
+                    result.sort((a, b) => {
+                        if (a["classTime"] < b["classTime"]) {
+                          return -1;
+                        }
+                        if (a["classTime"] > b["classTime"]) {
+                          return 1;
+                        }
+                        return 0;
+                      });
                     $.each(result, function(i, field){
                             // console.log(result[i].lessonNumber);
                             // console.log(nowCheckBox.value);

@@ -82,5 +82,34 @@
         "teacher":"李孟書",
         "className":"微積分",
         "category":"必修"
+    },
+    {
+        "lessonNumber":"M5701M6E",
+        "classTime":[302,303,304],
+        "teacher":"嚴茂旭",
+        "className":"超大型積體電路設計",
+        "category":"選修"
+    },
+    {
+        "lessonNumber":"M5701J7K",
+        "classTime":[306,307,308],
+        "teacher":"蔡國煇",
+        "className":"輸出入裝置與驅動程式設計",
+        "category":"選修"
+    },
+    {
+        "lessonNumber":"",
+        "classTime":[],
+        "teacher":"",
+        "className":"",
+        "category":""
+    },
+    {
+        "lessonNumber":"",
+        "classTime":[],
+        "teacher":"",
+        "className":"",
+        "category":""
     }
+    
 ]
