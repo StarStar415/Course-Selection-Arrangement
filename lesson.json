@@ -110,5 +110,75 @@
         "teacher":"張欽圳",
         "className":"Python程式語言",
         "category":"選修"
+    },
+    {
+        "lessonNumber":"B9M013Z4",
+        "classTime":[701,702],
+        "teacher":"待聘",
+        "className":"【跨校線上課程】生活中無所不在的物理(自然)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M01ZCM",
+        "classTime":[201,202],
+        "teacher":"林志聖",
+        "className":"性別議題與親密關係發展(人格)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M01ZJJ",
+        "classTime":[403,404],
+        "teacher":"鄭師中",
+        "className":"氣象與災變天氣(自然)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M01ZIX",
+        "classTime":[406,407],
+        "teacher":"華健",
+        "className":"環境課題(自然)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M014EN",
+        "classTime":[206,207],
+        "teacher":"張景煜",
+        "className":"台灣之美(人格)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M013TD",
+        "classTime":[503,504],
+        "teacher":"紀金慶",
+        "className":"生命哲學(經典)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M01ZGQ",
+        "classTime":[203,204],
+        "teacher":"吳允中",
+        "className":"物理中看音樂 --- 音樂中看物理(自然)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M01ZFV",
+        "classTime":[406,407],
+        "teacher":"張正傑",
+        "className":"卓越大師講座(民主)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M01ZGQ",
+        "classTime":[406,407],
+        "teacher":"陳雪燕",
+        "className":"世界名歌欣賞(經典)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M01ZGF",
+        "classTime":[406,407],
+        "teacher":"孫寶年",
+        "className":"優質企業人系列講座(全球)",
+        "category":"通識"
     }
 ]
