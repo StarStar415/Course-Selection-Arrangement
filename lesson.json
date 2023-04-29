@@ -98,18 +98,17 @@
         "category":"選修"
     },
     {
-        "lessonNumber":"",
-        "classTime":[],
-        "teacher":"",
-        "className":"",
-        "category":""
+        "lessonNumber":"B5702R97",
+        "classTime":[206,207,208],
+        "teacher":"鄭錫齊",
+        "className":"數位影像處理",
+        "category":"選修"
     },
     {
-        "lessonNumber":"",
-        "classTime":[],
-        "teacher":"",
-        "className":"",
-        "category":""
+        "lessonNumber":"B57022TS",
+        "classTime":[106,107,108],
+        "teacher":"張欽圳",
+        "className":"Python程式語言",
+        "category":"選修"
     }
-    
 ]
