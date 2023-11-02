@@ -63,10 +63,10 @@
         "category":"選修"
     },
     {
-        "lessonNumber":"M5701M6E",
+        "lessonNumber":"M570171E",
         "classTime":[302,303,304],
         "teacher":"嚴茂旭",
-        "className":"超大型積體電路設計",
+        "className":"可重組式系統晶片設計",
         "category":"選修"
     }
 ]
