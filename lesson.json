@@ -63,10 +63,31 @@
         "category":"選修"
     },
     {
+        "lessonNumber":"B9M01Z5W",
+        "classTime":[301,302],
+        "teacher":"應俊豪",
+        "className":"世界文明與發展(全球)",
+        "category":"通識"
+    },
+    {
         "lessonNumber":"M570171E",
         "classTime":[302,303,304],
         "teacher":"嚴茂旭",
         "className":"可重組式系統晶片設計",
         "category":"選修"
+    },
+    {
+        "lessonNumber":"B9M01ZCW",
+        "classTime":[503,504],
+        "teacher":"應俊豪",
+        "className":"東亞海權發展與演變(科技)",
+        "category":"通識"
+    },
+    {
+        "lessonNumber":"B9M01ZGH",
+        "classTime":[308,309],
+        "teacher":"陳雪燕",
+        "className":"音樂劇場(經典)",
+        "category":"通識"
     }
 ]
