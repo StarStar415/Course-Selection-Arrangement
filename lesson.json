@@ -21,22 +21,8 @@
         "category":"選修"
     },
     {
-        "lessonNumber":"B57034A9",
-        "classTime":[303,304,305],
-        "teacher":"潘世穎",
-        "className":"IOS App遊戲開發",
-        "category":"選修"
-    },
-    {
-        "lessonNumber":"B57034A9",
-        "classTime":[307,308,309],
-        "teacher":"潘世穎",
-        "className":"IOS App遊戲開發",
-        "category":"選修"
-    },
-    {
         "lessonNumber":"B5703723",
-        "classTime":[506,507,508],
+        "classTime":[302,303,304],
         "teacher":"林致宇",
         "className":"系統程式",
         "category":"核心選修"
@@ -64,7 +50,7 @@
     },
     {
         "lessonNumber":"B9M01Z5W",
-        "classTime":[301,302],
+        "classTime":[501,502],
         "teacher":"應俊豪",
         "className":"世界文明與發展(全球)",
         "category":"通識"
@@ -85,9 +71,34 @@
     },
     {
         "lessonNumber":"B9M01ZGH",
-        "classTime":[308,309],
-        "teacher":"陳雪燕",
-        "className":"音樂劇場(經典)",
-        "category":"通識"
+        "classTime":[202,203,204],
+        "teacher":"林韓禹",
+        "className":"資訊安全實務與管理",
+        "category":"選修"
+    },
+    {
+        "lessonNumber":"B570332K",
+        "classTime":[302,303,304],
+        "teacher":"鄭錫齊",
+        "className":"機器學習技術",
+        "category":"選修"
+    },{
+        "lessonNumber":"B570358N",
+        "classTime":[206,207,208],
+        "teacher":"丁培毅",
+        "className":"物件導向程式設計",
+        "category":"選修"
+    },{
+        "lessonNumber":"B5703IA4",
+        "classTime":[408,409,410],
+        "teacher":"丁培毅",
+        "className":"密碼學與應用",
+        "category":"選修"
+    },{
+        "lessonNumber":"B5703Q0G",
+        "classTime":[402,403,404],
+        "teacher":"蔡宇軒",
+        "className":"編譯器",
+        "category":"選修"
     }
 ]
